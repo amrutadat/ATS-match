@@ -73,7 +73,6 @@ the job description. First the output should come as percentage and then keyword
 
 #if submit1:
     #if uploaded_file is not None:
-@st.cache_data
       #  pdf_content=input_pdf_setup(uploaded_file)
      #   response=get_gemini_response(input_prompt1,pdf_content,input_text)
     #    st.subheader("The Repsonse is")
@@ -91,7 +90,6 @@ if submit3:
         st.write("Please uplaod the resume")
 
     if uploaded_file1 is not None:
-        @st.cache_data
         pdf_content=input_pdf_setup(uploaded_file1)
         response=get_gemini_response(input_prompt3,pdf_content,input_text)
         st.subheader("The Repsonse for second resume")
@@ -100,7 +98,6 @@ if submit3:
         st.write("Please uplaod the resume")
         
     if uploaded_file2 is not None:
-        @st.cache_data
         pdf_content=input_pdf_setup(uploaded_file2)
         response=get_gemini_response(input_prompt3,pdf_content,input_text)
         st.subheader("The Repsonse for third resume")
